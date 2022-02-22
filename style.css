@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+  background: #000;
+}
+.slide-c {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.slide-e {
+  z-index: 99;
+  height: 100vh;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: transform .5s ease-in-out;
+}
+
+.slide-e > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f9f9f9;
+}
+
+.slide-e h1 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-top: -2rem;
+}
+.slide-e p {
+  font-weight: 300;
+  text-align: center;
+  font-size: .9rem;
+  margin-top: 1rem;
+  width: 300px;
+}
+
+.slide-d {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;  
+
+  transition: transform .5s ease-in-out;
+}
+
+.slide-d > div {
+  transform-origin: center center;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  color: #777;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  transition: padding 0.1s linear;
+}
+button:hover {
+  background: #ccc;
+  color: #111;
+}
+button:active {
+  padding: 0.65rem 0.95rem;
+  font-size: 0.9rem;
+}
+
+.slide-c .cta-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slide-c .cta-buttons .b-pb {
+  transform: translateX(-100%);
+  border-top: solid 5px #bbb;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.slide-c .cta-buttons .b-pc {
+  transform: translateY(-100%);
+  border-bottom: solid 5px #bbb;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+
+footer {
+  z-index: 100;
+  position: absolute;
+  bottom: 1rem;
+  left: 10%;
+  font-weight: 300;
+  color: #888;
+}
+a {
+  text-decoration: none;
+  color: #777;
+}
+a:hover {
+  text-decoration: underline 1px #888;
+  color: #666;
+}
