@@ -34,8 +34,9 @@ const trocarSlide = (direction) => {
   slideE.style.transform = `translateY(${slideIndex * sliderHeight}px)`;
 };
 
+
 const img = document.querySelectorAll(".slide-d div");
-const textos = document.querySelectorAll("h1")
+const texto = document.querySelectorAll("h1")
 
 slideD.addEventListener("mousemove", (z) => {
   for (let i = 0; i < img.length; i += 1) {
@@ -60,21 +61,21 @@ slideD.addEventListener("mouseleave", () => {
 
 
 slideE.addEventListener("mousemove", (z) => {
-  for (let i = 0; i < textos.length; i += 1) {
+  for (let i = 0; i < texto.length; i += 1) {
     let x = z.clientX - z.target.offsetLeft;
     let y = z.clientY - z.target.offsetTop;
 
-    textos.item(i).style.transformOrigin = `${x}px center`;
-    textos.item(i).style.transform = `scale(1.005)`;
+    texto.item(i).style.transformOrigin = `${x}px center`;
+    texto.item(i).style.transform = `scale(1.003)`;
   }
 });
 
 slideE.addEventListener("mouseleave", () => {
-  for (let i = 0; i < textos.length; i += 1) {
+  for (let i = 0; i < texto.length; i += 1) {
     let x = z.clientX - z.target.offsetLeft;
     let y = z.clientY - z.target.offsetTop;
 
-    textos.item(i).style.transformOrigin = `center center`;
-    textos.item(i).style.transform = `scale(1)`;
+    texto.item(i).style.transformOrigin = `center center`;
+    texto.item(i).style.transform = `scale(1)`;
   }
 });
